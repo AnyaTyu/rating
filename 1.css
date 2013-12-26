@@ -1,0 +1,34 @@
+.rating 
+{
+float:left;
+}
+.rating:not(:checked) > input 
+{
+    display: none;
+}
+.rating:not(:checked) > label 
+{
+    float:right;
+    
+    width:32px;    
+    height:32px;
+    
+    cursor:pointer;
+    
+    background:url('star_off.png');
+}
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label
+{
+    background:url('misc_58.png');
+}
+
+.rating > input:checked ~ label,
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label 
+{
+    background:url('misc_57.png');
+}
